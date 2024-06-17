@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context=".Fragments.Frag_Expected_Weights">
+
+    <TextView
+        android:id="@+id/expected_weight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal"
+        android:text="Expected Weight: 38g - 45g"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:id="@+id/eweight_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Week  0"
+        android:labelFor="@id/eweight_seekbar"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/expected_weight"
+        android:layout_marginTop="100dp"
+        android:textColor="#999999"
+        android:textSize="16sp" />
+
+    <SeekBar
+        android:id="@+id/eweight_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="6"
+        android:layout_below="@id/eweight_hint"
+        />
+
+
+</RelativeLayout>

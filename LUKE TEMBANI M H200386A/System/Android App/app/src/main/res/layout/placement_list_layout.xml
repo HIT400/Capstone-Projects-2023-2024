@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/placement_card_item"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+   android:layout_marginTop="8dp"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:background="@drawable/placement_list_card_design"
+    android:layout_height="wrap_content"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/company_name_placement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Company Name"
+            />
+
+        <TextView
+            android:id="@+id/chicks_breed_placement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/company_name_placement"
+            android:text="Chicks Breed"
+            />
+
+        <TextView
+            android:id="@+id/chicks_quantity_placement"
+            android:layout_width="match_parent"
+            android:layout_below="@id/chicks_breed_placement"
+            android:layout_height="wrap_content"
+            android:text="Quantity"
+            />
+
+        <TextView
+            android:id="@+id/placement_date_placement"
+            android:layout_width="match_parent"
+            android:layout_below="@id/chicks_quantity_placement"
+            android:layout_height="wrap_content"
+            android:text="Placement Date"
+            />
+
+        <TextView
+            android:id="@+id/status_placement"
+            android:layout_width="match_parent"
+            android:layout_below="@id/placement_date_placement"
+            android:layout_height="wrap_content"
+            android:text="Placement Status"
+            />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

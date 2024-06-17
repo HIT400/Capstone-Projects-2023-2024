@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    >
+<group android:checkableBehavior="single">
+    <item android:id="@+id/alter_env"
+        android:title="Alter Environment"
+        android:icon="@drawable/weather_env"
+        />
+
+    <item
+        android:id="@+id/add_placement"
+        android:icon="@drawable/add_placement_icon_new"
+        android:title="Add Placement" />
+    <item
+        android:id="@+id/buy_feed"
+        android:icon="@drawable/buy_icon"
+        android:title="Buy Chicken Feed" />
+
+    <item
+        android:id="@+id/expected_weights"
+        android:icon="@drawable/expected_weight"
+        android:title="Expected Weight" />
+
+    <item
+        android:id="@+id/required_stocks"
+        android:icon="@drawable/required_stock"
+        android:title="Required Stock" />
+
+    <item
+        android:id="@+id/contact_vet"
+        android:icon="@drawable/call_icon"
+        android:title="Contact Veterinarians" />
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/logout_icon"
+        android:title="Log Out" />
+</group>
+
+
+</menu>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_margin="15dp"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Frag_AddStock">
+
+    <TextView
+        android:id="@+id/add_stock_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="Add Stock Screen" />
+
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/stock_type"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/add_stock_header"
+        android:drawableEnd="@drawable/drop_down_icon"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        android:hint="Choose Stock Type"
+        android:inputType="text"
+        />
+
+    <FrameLayout
+        android:id="@+id/stock_type_fields"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_below="@id/stock_type"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        />
+
+
+
+</RelativeLayout>

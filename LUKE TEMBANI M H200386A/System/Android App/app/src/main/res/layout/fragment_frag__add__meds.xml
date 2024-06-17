@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="30dp"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Frag_Add_Meds">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/meds_lyt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/meds_type"
+            android:layout_width="match_parent"
+            android:hint="Medication Name"
+            android:background="@android:drawable/editbox_background"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/meds_qty_lyt"
+        android:layout_width="match_parent"
+        android:layout_below="@id/meds_lyt"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/meds_qty"
+            android:layout_width="match_parent"
+            android:hint="Quantity"
+            android:background="@android:drawable/editbox_background"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Save"
+        android:id="@+id/save_stock_btn"
+        />
+
+
+</RelativeLayout>
