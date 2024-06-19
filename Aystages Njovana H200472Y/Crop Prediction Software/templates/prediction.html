@@ -1,0 +1,98 @@
+{%extends 'index.html'%}
+<!-- Sale & Revenue Start -->
+
+
+
+{%block content%}
+
+
+<div class="row g-4">
+    <div class="col-sm-12 col-xl-6">
+        
+        <div class="bg-light rounded h-100 p-5">
+            <h6 class="mb-4 text-success">Enter the parameters</h6>
+            <form method="POST" action="/predict">
+                <div class="mb-3">
+                    <label for="rainfall" class="form-label">Rainfall /mm</label>
+                    <input type="text" class="form-control" id="rainfall" name="average_rain_fall_mm_per_year" step="0.10" oninput="ValidateNumber('rainfall');">
+                </div>
+                <div class="mb-3">
+                    <label for="temperature" class="form-label">Temperature /°C</label>
+                    <input type="text" class="form-control" id="temperature" name="avg_temp" step="0.10" oninput="ValidateNumber('temperature');">
+                </div>
+                <div class="mb-3">
+                    <label for="pesticides" class="form-label">Pesticides /t</label>
+                    <input type="text" class="form-control" id="pesticides" name="pesticides_tonnes" step="0.1" oninput="ValidateNumber('pesticides'); ">
+                </div>
+                <div class="mb-3">
+                    <label for="item" class="form-label">Item</label>
+                    <select name="Item" id="item" class="form-control">
+                        {% for item, code in countries["Item"].items() %}
+                        <option value="{{ code }}">{{ item }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <br>
+              
+                <div class="mb-3">
+                    <label for="pesticides" class="form-label">Country</label>
+                    <select name="Area" id="country" class="form-control">
+                        {% for country, code in countries["Area"].items() %}
+                        <option value="{{ code }}">{{ country }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                
+                
+                <div class="mb-3">
+                    <label for="rainfall" class="form-label">Year</label>
+                    <input type="number" class="form-control" id="rainfall" name="Year" step="1" min="1990" max="2030"">
+                </div>
+
+                <!-- <div class="mb-3">
+                    <label for="pesticides" class="form-label">Year</label>
+                    <select id="yearPicker" class="form-control">
+                        <option value="">Select Year</option> -->
+                        <!-- Populate options with desired range of years -->
+                        <!-- For example, from current year to 10 years in the future -->
+                        <!-- <script>
+                          
+                          var futureYear = new Date().getFullYear();
+                          var currentYear = 1990;
+                          for (var year = currentYear; year <= futureYear; year++) {
+                            document.write('<option value="' + year + '">' + year + '</option>');
+                          }
+                        </script> -->
+                      <!-- </select>
+                </div> -->
+
+               
+                  
+                <button type="submit" class="btn btn-success">Predict</button>
+            </form>
+            
+        </div>
+        
+    </div>
+    <div class="col-sm-12 col-xl-6">
+        <div class="bg-light rounded h-100 p-5">
+            <h6 class="mb-4 text-success">Prediction Output</h6>
+            <h3 class="fw-light">{{session['current_crop']}}</h3>
+            <h3 class="fw-light">{{ session['prediction'] }} hg/ha</h3>
+            <h6 class="mb-4 text-success">Recommendations</h6>
+            <h6 class="mb-4 text-success">Yield Pool</h6>
+            {% for pred in session['predicted_array'] %}
+                <ul>
+                    {% set crop_name, yield_value = pred %}
+                    <li>{{ crop_name }} - {{ yield_value }} hg/ha</li>
+                </ul>
+            {% endfor %}
+            <h6 class="fw-light mb-4 text-success"> Crop recommended to plant is {{session['recommended']}} since it has the highest yield</h6>
+        </div>
+    </div>
+ </div>
+ <br/><br/>
+
+ {%endblock%}
+
+

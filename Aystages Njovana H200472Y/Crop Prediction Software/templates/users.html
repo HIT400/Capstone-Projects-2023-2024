@@ -1,0 +1,45 @@
+{%extends 'index.html'%}
+
+{%block content%}
+
+<div class="bg-light rounded h-100 p-4">
+    <h6 class="mb-4">System Users</h6>
+    <br>
+    <a href="/new-user" class="btn btn-success">Add User</a>
+    <br>
+    <br>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">Date Created</th>
+                    <th scope="col">Date Modified</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%for user in users%}
+                <tr>
+                    <th scope="row">{{user[0]}}</th>
+                    <td>{{user[1]}}</td>
+                    <td>{{user[2]}}</td>
+                    <td>{{user[4]}}</td>
+                    <td>{{user[5]}}</td>
+                    <td>{{user[6]}}</td>
+                    <td>
+                        <a href="/edit?id={{user[0]}}" class="text-success p-2"><i class="fa fa-pen me-2"></i>Edit</a>
+                    
+                        <a href="/delete?id={{ user[0]}}" class="text-danger p-2"><i class="fa fa-trash me-2"></i>Delete</a>
+                    </td>
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{%endblock%}

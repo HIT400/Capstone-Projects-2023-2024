@@ -1,0 +1,52 @@
+{%extends 'index.html'%}
+
+{%block content%}
+
+<div class="bg-light rounded h-100 p-4">
+    <h6 class="mb-4">Predictions</h6>
+    <br>
+    <a href="/generate_report" class="btn btn-success">Generate Prediction Report</a>
+    <br>
+    <br>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Country</th>
+                    <th scope="col">Item</th>
+                    <th scope="col">Pesticides</th>
+                    <th scope="col">Temperature</th>
+                    <th scope="col">Year</th>
+                    <th scope="col">Rainfall</th>
+                    <th scope="col">Prediction</th>
+                    <th scope="col">Date</th>
+                    <!-- <th scope="col">Actions</th> -->
+                </tr>
+            </thead>
+            <tbody>
+                {%for prediction in predictions%}
+                <tr>
+                    <th scope="row">{{prediction[0]}}</th>
+                    <td>{{prediction[1]}}</td>
+                    <td>{{prediction[2]}}</td>
+                    <td>{{prediction[3]}}</td>
+                    <td>{{prediction[4]}}</td>
+                    <td>{{prediction[5]}}</td>
+                    <td>{{prediction[6]}}</td>
+                    <td>{{prediction[7]}}</td>
+                    <td>{{prediction[8]}}</td>
+                    <td>{{prediction[9]}}</td>
+                    <!-- <td>
+                        <a href="/edit" class="text-success p-2"><i class="fa fa-pen me-2"></i>Edit</a>
+                    
+                        <a href="/edit" class="text-danger p-2"><i class="fa fa-trash me-2"></i>Delete</a>
+                    </td> -->
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{%endblock%}
