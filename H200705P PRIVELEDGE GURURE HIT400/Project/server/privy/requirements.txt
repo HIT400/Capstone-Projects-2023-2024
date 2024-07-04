@@ -1,0 +1,5 @@
+deepface
+tf-keras
+Pillow
+django
+djangorestframework
