@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_margin="20dp"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.InfoFrags.Frag_Breeding">
+
+    <TextView
+        android:id="@+id/topic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Biosecurity Measures"
+        android:textSize="15sp"
+        />
+
+    <ImageView
+        android:id="@+id/possible_routes"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/topic"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:src="@drawable/biosecurity"
+        />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/definition"
+        android:layout_below="@+id/possible_routes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineHeight="20dp"
+        android:text="What is Biosecurity?\n\na set of practices put in place to limit the spread of disease or contamination from one location to another. Because poultry is housed in close confinement, disease spreads rapidly from one bird to another and outbreaks can be economically devastating."
+        android:textSize="15sp"
+        />
+
+
+
+
+</RelativeLayout>

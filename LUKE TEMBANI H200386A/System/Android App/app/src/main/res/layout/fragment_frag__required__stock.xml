@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    tools:context=".Fragments.Frag_Required_Stock">
+
+    <TextView
+        android:id="@+id/required_chicks_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="@string/required_stock" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/chicksNumberLyt"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        app:boxBackgroundMode="filled"
+        app:boxBackgroundColor="@color/transparent_color"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/required_chicks_banner"
+        android:hint="Number Of Chicks"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/num_required_birds"
+            android:layout_width="match_parent"
+            android:inputType="number"
+            android:max="1000000"
+            android:layout_height="wrap_content"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/chicksNumberLyt"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/starter_feed_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Starter: 10Kg"
+                />
+
+            <TextView
+                android:id="@+id/grower_feed_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Growers: 10Kg"
+                />
+
+            <TextView
+                android:id="@+id/finisher_feed_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Finisher: 10Kg"
+                />
+
+            <TextView
+                android:id="@+id/stresspack_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Stress Pack: 1Kg"
+                />
+
+            <TextView
+                android:id="@+id/feeders_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Feeders: 5"
+                />
+
+            <TextView
+                android:id="@+id/drinkers_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Drinkers: 5"
+                />
+
+            <TextView
+                android:id="@+id/room_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Room Size: 4 × 10 M"
+                />
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

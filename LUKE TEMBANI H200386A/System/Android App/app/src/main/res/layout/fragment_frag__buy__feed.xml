@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context=".Fragments.Frag_Buy_Feed">
+
+    <TextView
+        android:id="@+id/header_buy_feed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Supplier" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/supplier_list_rcv"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header_buy_feed"
+        />
+
+
+</RelativeLayout>

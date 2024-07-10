@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Frag_CheckWeather">
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+<!--        Weather Today Header-->
+        <LinearLayout
+            android:id="@+id/weather_header"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weather Today"
+                android:padding="10dp"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_weight="2"
+                android:textSize="25sp"
+                android:textStyle="italic"
+                />
+
+            <ImageView
+                android:id="@+id/rainy_cloud_imgv"
+                android:layout_weight="1"
+                android:src="@drawable/sun_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+<!--        Chicken Coup Data-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="Chicken Coup ID: Class A"
+                android:padding="10dp"
+                android:layout_weight="2"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/weather_card_dsn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+                        <ImageView
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/temp_icon"
+                            android:src="@drawable/temperature_icon"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            />
+
+                        <TextView
+                            android:layout_below="@+id/temp_icon"
+                            android:layout_centerHorizontal="true"
+                            android:layout_width="wrap_content"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_height="wrap_content"
+                            android:text="Temp\n22°C"
+                            android:textSize="20sp"
+                            />
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/weather_card_dsn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+                        <ImageView
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/humidity_icon"
+                            android:src="@drawable/humidity_icon"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            />
+
+                        <TextView
+                            android:layout_below="@+id/humidity_icon"
+                            android:layout_centerHorizontal="true"
+                            android:layout_width="wrap_content"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_height="wrap_content"
+                            android:text="Humidity\n30%"
+                            android:textSize="20sp"
+                            />
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/weather_card_dsn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+                        <ImageView
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/pressure_icon"
+                            android:src="@drawable/pressure_icon"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            />
+
+                        <TextView
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/pressure_icon"
+                            android:layout_width="wrap_content"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_height="wrap_content"
+                            android:text="Pressure\n15.4Pa"
+                            android:textSize="20sp"
+                            />
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+<!--        Suggestions View-->
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Suggestions"
+                        android:padding="10dp"
+                        android:textSize="25sp"
+                        android:textStyle="italic"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:textSize="20sp"
+                        android:layout_height="wrap_content"
+                        android:text="Increase Temperature to 35 Degrees\nReduce Humidity to 20%\nMaintain Humididty at current level"/>
+
+                </LinearLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

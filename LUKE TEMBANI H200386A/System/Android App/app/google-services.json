@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "64337621985",
+    "project_id": "modern-farmer-d5a73",
+    "storage_bucket": "modern-farmer-d5a73.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:64337621985:android:4c783e3cd77c08b30298a0",
+        "android_client_info": {
+          "package_name": "com.codedev.modernfarmer"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_xw_O5w7Hn314QePn_VezvojdnEbYftk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
