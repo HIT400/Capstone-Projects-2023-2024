@@ -1,0 +1,17 @@
+<!-- templates/drivers/recognize_driver.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recognize Driver</title>
+</head>
+<body>
+    <h1>Upload Driver's Picture for Recognition</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="uploaded_image" accept="image/*" required>
+        <button type="submit">Recognize</button>
+    </form>
+</body>
+</html>

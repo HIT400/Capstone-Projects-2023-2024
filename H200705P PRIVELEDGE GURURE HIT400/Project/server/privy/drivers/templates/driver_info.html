@@ -1,0 +1,23 @@
+<!-- templates/drivers/driver_info.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Information</title>
+</head>
+<body>
+    <h1>Driver Information</h1>
+    {% if driver %}
+        <h2>{{ driver.name }}</h2>
+        <p>Age: {{ driver.age }}</p>
+        <p>License Number: {{ driver.license_number }}</p>
+        <p>National ID: {{ driver.national_id }}</p>
+        <p>Issued Year: {{ driver.issued_year }}</p>
+        <p>Driver Class: {{ driver.driver_class }}</p>
+    {% elif message %}
+        <p>{{ message }}</p>
+    {% endif %}
+    <p><a href="{% url 'recognize_driver' %}">Recognize Another Driver</a></p>
+</body>
+</html>
